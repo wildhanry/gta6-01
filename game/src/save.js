@@ -24,7 +24,7 @@ export function hasSave() {
 export function writeSave(state) {
   try {
     const rec = {
-      cash: Math.round(state.cash), missionIndex: state.missionIndex,
+      cash: Math.round(state.cash), missionIndex: state.mission ? state.mission.index : state.missionIndex,
       missionsDone: state.missionsDone, x: Math.round(state.player.x),
       y: Math.round(state.player.y), taxiFares: state.taxiFares || 0,
       trialsWon: state.trialsWon || 0,
